@@ -1,5 +1,6 @@
 // This little program displays a message on the console log whenever the user clicks the button.
 // First of all, you need to create a button and give it an id. Inside the MainActivity.java file write the below code:
+// And add onclick attributes in the XML file
 
 public class_name(View view_name) {
 //       v = findViewById(button_id); Not needed
