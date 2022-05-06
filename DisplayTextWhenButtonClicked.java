@@ -2,7 +2,7 @@
 // First of all, you need to create a button and give it an id. Inside the MainActivity.java file write the below code:
 // And add onclick attributes in the XML file
 // Add this method
-public void class_name(View view_name) {
+public void method_name(View view_name) {
       Log.view_name(tag:"button", msg:"Button Clicked");      
 }  
 
@@ -19,12 +19,12 @@ button_name = findViewById(button_id);
 button_name.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-            class_name(); // calls the method
+            method_name(); // calls the method
       }
 });
 
 // Add this method
-public void class_name() {
+public void method_name() {
       Log.view_name(tag:"button", msg:"Button Clicked");      
 } 
 
