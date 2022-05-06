@@ -28,3 +28,6 @@ public void method_name() {
       Log.view_name(tag:"button", msg:"Button Clicked");      
 } 
 
+// To see the content in the log, go down to the debugger panel and open the logcat
+// Type in the tag you specified inside the search button and click verbose
+// Now the text will be displayed whenever the event you specified occurs
