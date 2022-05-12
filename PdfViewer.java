@@ -1,0 +1,24 @@
+// Creating an app that displays a pdf so that the users can read.
+
+// You need to add independencies into your gradle file
+implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+  
+// Include this, inside the main layout file 
+
+<com.github.barteksc.pdfviewer.PDFView /> // and give it the attributes you like
+  
+// Now, before going to the android main activity java file, add an "assets" folder and add a sample pdf file in it.
+// android/src/main/assets/your_file.pdf
+  
+// Now, inside the MainActivity file declare and initialize PDFView
+PDFView view_name;
+
+view_name = findViewById(R.id.view_id);
+
+// Last step, let's load the view:
+
+view_name 
+    .fromAsset("your_file.pdf") // don't forget the extension
+    .load(); // You can also add other methods
+// Done
