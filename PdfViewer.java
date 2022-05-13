@@ -20,5 +20,7 @@ view_name = findViewById(R.id.view_id);
 
 view_name 
     .fromAsset("your_file.pdf") // don't forget the extension
-    .load(); // You can also add other methods
+    .load(); // You can also add other methods (One cool feature is enabling night mode: 
+             // To do this, change the dependcy you added to: "implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'"
+             // Then add .nightMode(true) method).
 // Done
