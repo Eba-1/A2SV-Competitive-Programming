@@ -1,0 +1,22 @@
+// Java Solution for the question "grading student" o hackerrank
+
+class Result {
+
+    public static List<Integer> gradingStudents(List<Integer> grades) {
+    // Write your code here
+        List<Integer> result = new ArrayList<>();
+        
+        for(int i: grades){
+            if(i >= 38) {
+                int numToAdd = i % 5;
+                if(numToAdd >= 3) {
+                    i += (5 - numToAdd);
+                }
+            }
+            result.add(i);
+            
+        } // end of of loop
+        
+        return result;
+    }
+}
