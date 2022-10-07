@@ -1,0 +1,29 @@
+// Java Solution for the FizzBuxx Solution on Leetcode
+
+
+class Solution {
+    
+    public List<String> fizzBuzz(int n) {
+        
+        List<String> listOfStrings = new ArrayList<String>();
+        
+        for(int i=1; i<=n; i++) {
+            if(i % 3==0 && i % 5==0) {
+                listOfStrings.add("FizzBuzz");
+            }
+            else if(i%3 == 0) {
+                   listOfStrings.add("Fizz");
+            }
+            else if(i%5 == 0) {
+                   listOfStrings.add("Buzz");
+            }
+            else {
+                String convertToString = Integer.toString(i);
+                listOfStrings.add(convertToString );
+            }
+            
+        } // end of for loop
+        
+        return listOfStrings;
+    }    
+}
