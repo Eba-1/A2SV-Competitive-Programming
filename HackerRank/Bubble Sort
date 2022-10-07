@@ -1,0 +1,26 @@
+// Java Solution for the Bubble Sort question on Hackerrank
+
+public static void countSwaps(List<Integer> a) {
+        
+  int numOfSwaps = 0;
+
+  for(int i = 0; i < a.size(); i++) {
+
+      for(int j = 0 ; j < a.size()-i-1; j++) {
+
+          if( a.get(j) > a.get(j+1) ) {
+
+              int tempVariable = a.get(j);
+              a.set(j, a.get(j+1));
+              a.set(j+1, tempVariable);
+              numOfSwaps++;
+
+          } // end of if statement
+      }
+  } // end of outer for loop
+
+  System.out.println("Array is sorted in " + numOfSwaps + " swaps.");
+  System.out.println("First Element: " + a.get(0));
+  System.out.println("Last Element: " + a.get(a.size()-1));
+
+}
