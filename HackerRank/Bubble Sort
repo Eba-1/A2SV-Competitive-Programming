@@ -2,11 +2,11 @@
 
 public static void countSwaps(List<Integer> a) {
         
-  int numOfSwaps = 0;
+  int numOfSwaps = 0, listSize = a.size();
 
-  for(int i = 0; i < a.size(); i++) {
+  for(int i = 0; i < listSize; i++) {
 
-      for(int j = 0 ; j < a.size()-i-1; j++) {
+      for(int j = 0 ; j < listSize-i-1; j++) {
 
           if( a.get(j) > a.get(j+1) ) {
 
@@ -21,6 +21,6 @@ public static void countSwaps(List<Integer> a) {
 
   System.out.println("Array is sorted in " + numOfSwaps + " swaps.");
   System.out.println("First Element: " + a.get(0));
-  System.out.println("Last Element: " + a.get(a.size()-1));
+  System.out.println("Last Element: " + a.get(listSize-1));
 
 }
