@@ -1,0 +1,23 @@
+// Java Solution for the question "numbers smaller than current number" on Leetcode
+
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+        
+        int[] freqOfNumber = new int[nums.length];
+        int size = nums.length;
+        
+        for(int i=0; i<size; i++) {
+            int count=0;
+            int referenceVariable = nums[i];
+            
+            for(int j: nums) {
+                if(j<referenceVariable)
+                    count++;
+            }
+            
+            freqOfNumber[i] = count;
+        }
+        
+        return freqOfNumber;
+    }
+}
