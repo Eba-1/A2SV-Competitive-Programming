@@ -1,0 +1,33 @@
+// Java Solution for the question "Sort Color" on Leetcode
+
+
+// I chose Bubble Sort because I wanted to get familiar with this algorithm.
+
+class Solution {
+    public void sortColors(int[] nums) {
+        boolean flag = false;
+        int size = nums.length;
+        
+        do{
+            flag=false;
+            
+            for(int i=0; i<size-1; i++) {
+            
+                if(nums[i]>nums[i+1]) {
+                
+                    int tempVariable = nums[i];
+                    nums[i] = nums[i+1];
+                    nums[i+1] = tempVariable;
+                    flag = true;
+                    
+                }                
+            }            
+        } while(flag);  
+    }
+}
+
+// The simplest way we can do is:
+
+//       Arrays.sort(nums);
+
+// which returns a sorted array "nums".
