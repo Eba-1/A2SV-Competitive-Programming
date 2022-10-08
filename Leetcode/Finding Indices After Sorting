@@ -1,0 +1,16 @@
+// Java solution for the question "Finding Indices After Sorting" on Leetcode
+
+class Solution {
+    public List<Integer> targetIndices(int[] nums, int target) {
+        List<Integer> returnList = new ArrayList<Integer>();
+        Arrays.sort(nums);
+        
+        for(int i=0; i<nums.length; i++) {
+            if(nums[i]==target)
+                returnList.add(i);
+        }
+        
+        Collections.sort(returnList);
+        return returnList;
+    }
+}
