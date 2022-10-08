@@ -30,4 +30,4 @@ class Solution {
 
 //       Arrays.sort(nums);
 
-// which returns a sorted array "nums".
+// which sorts the array "nums".
