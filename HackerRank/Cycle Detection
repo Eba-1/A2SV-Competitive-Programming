@@ -1,0 +1,18 @@
+// Java Solution for the question "Cycle Detection" on Hackerrank.
+
+static boolean hasCycle(SinglyLinkedListNode head) {
+  boolean flag = false;
+
+  SinglyLinkedListNode fastPointer = head;
+  SinglyLinkedListNode slowPointer = head;
+
+  while ( fastPointer!= null && fastPointer.next != null ) {
+
+      slowPointer = slowPointer.next;
+      fastPointer = fastPointer.next.next;
+
+      if ( slowPointer == fastPointer )
+          return !flag;
+  }
+  return flag;
+}
