@@ -1,0 +1,40 @@
+// Java Solution for the question "Design Linked List" on Leetcode
+
+
+class MyLinkedList {
+    ArrayList<Integer> myList;
+    
+    public MyLinkedList() {
+        myList = new ArrayList<Integer>();
+    }
+    
+    public int get(int index) {
+        int count = 0, size = myList.size();
+        
+        while (count != index && count < size)
+            count++;
+        
+        if ( count == index && count < size )
+            return myList.get(count);
+        
+        return -1;
+    }
+    
+    public void addAtHead(int val) {
+        myList.add(0, val);
+    }
+    
+    public void addAtTail(int val) {
+        myList.add(myList.size(), val);
+    }
+    
+    public void addAtIndex(int index, int val) {
+        if ( index <= myList.size() )
+            myList.add(index, val);
+    }
+    
+    public void deleteAtIndex(int index) {
+        if ( index < myList.size() )
+            myList.remove(index);
+    }
+}
