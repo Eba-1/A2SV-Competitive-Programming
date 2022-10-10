@@ -1,4 +1,4 @@
-// Java solution to remove duplicates in LinkedList question on Leetcode
+// Java solution to remove duplicates in LinkedList
 
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
