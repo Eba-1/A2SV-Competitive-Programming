@@ -5,15 +5,14 @@ class Solution {
         if ( n < 2 ) 
             return n;
         
-        int f = 0, s3=0;
-        int s = 1;
+        int firstTerm = 0,  secondTerm = 1, series = 0;
         
         for ( int i = 1; i < n; i++ ) {
-            s3 = f + s;
-            f = s;
-            s = s3;
+            series = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = series;
         }
         
-        return s3;
+        return series;
     }
 }
