@@ -1,0 +1,28 @@
+// Java Solution to sort a sentence on Leetcode
+
+class Solution {
+    public String sortSentence(String s) {
+        String[] words = s.split("\\s+");
+        String str = "";
+        int size = words.length;
+        
+        for(int i=1; i<size; i++) {
+            int j=i-1;
+            int key= (int)(words[i].charAt(words[i].length()-1)-'0');
+            
+            while(j>=0 && (int)(words[j].charAt(words[j].length()-1)-'0')>key) {
+                String temp = words[j+1];
+                words[j+1] = words[j];
+                words[j] = temp;
+                j--;
+            }
+            
+        }
+        
+        for(int i=0; i<size-1; i++) {
+            str += words[i].substring(0, words[i].length()-1) + " ";
+        }
+        
+        return str+words[size-1].substring(0, words[size-1].length()-1);       
+    }
+}
