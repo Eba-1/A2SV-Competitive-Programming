@@ -1,0 +1,23 @@
+// Java Solution for the domino pilling problem on codeforces
+
+import java.util.*;
+
+public class domino {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int m = sc.nextInt();
+		int n = sc.nextInt();
+		
+		if( m==0 || n==0 )
+			System.out.println('0');
+		else {
+			int area = m * n;
+			System.out.println(area/2);
+		}
+		
+		sc.close();
+	}
+}
