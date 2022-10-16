@@ -1,0 +1,16 @@
+// Java Solution for the question minimize maximum sum of pairs on Leetcode.
+
+class Solution {
+    public int minPairSum(int[] nums) {
+        Arrays.sort(nums);
+        int j = nums.length-2;
+        int sumOfPairs = nums[0] + nums[j+1];
+        for( int i = 1; j >= 0 && i < nums.length-1; i++ ) {
+            int maxSumOfPairs = nums[i] + nums[j];
+            if( maxSumOfPairs > sumOfPairs )
+                sumOfPairs = maxSumOfPairs;
+            j--;
+        }
+        return sumOfPairs;
+    }
+}
