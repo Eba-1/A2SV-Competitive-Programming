@@ -1,0 +1,16 @@
+// Java solution for the question "Maximum number of coins you can get" on Leetcode
+
+class Solution {
+    public int maxCoins(int[] piles) {
+        
+        Arrays.sort(piles);
+        int num = 2, numOfCoins=0;
+        
+        for(int i=0; i<piles.length/3; i++) {
+            numOfCoins += piles[piles.length-num];
+            num +=2;
+        }
+        
+        return numOfCoins;        
+    }
+}
