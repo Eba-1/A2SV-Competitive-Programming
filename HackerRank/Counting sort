@@ -1,0 +1,11 @@
+// Java Solution for the question counting sort on HackerRank
+
+public static List<Integer> countingSort(List<Integer> arr) {
+// Write your code here
+    Integer[] arrayForFrequency = new Integer[100];
+    Arrays.fill(arrayForFrequency, 0);
+    for(int i: arr) {
+        arrayForFrequency[i]++;
+    }
+    return Arrays.asList(arrayForFrequency);
+}
