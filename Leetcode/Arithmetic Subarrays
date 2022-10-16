@@ -1,0 +1,36 @@
+// Java solution to the question Arithmetic subarray on Leetcode
+
+class Solution {
+    public List<Boolean> checkArithmeticSubarrays(int[] nums, int[] l, int[] r) {
+        
+        int m = l.length;
+        Integer[] arr;
+        List<Boolean> returnList = new ArrayList<Boolean>();
+        
+        for( int i = 0; i < m; i++ ) {
+            arr = new Integer[r[i]-l[i]+1];
+            int x = 0;
+            
+            for( int j = l[i]; j <= r[i]; j++ ) {
+                arr[x] =  nums[j]; 
+                x++;
+            } 
+            
+            Arrays.sort(arr);
+            int dif = Math.abs(arr[0]-arr[1]);
+            boolean flag = true;
+            
+            for( int k = 0; k < arr.length-1; k++ ) {
+                
+                if( Math.abs( arr[k] - arr[k+1] ) != dif ) {
+                    flag = false;
+                }   
+                
+            }
+            
+            returnList.add(flag);
+        }
+        
+        return returnList;
+    }
+}
